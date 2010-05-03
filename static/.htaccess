@@ -1,0 +1,14 @@
+Options +FollowSymlinks +MultiViews
+RewriteEngine on
+RewriteRule ^openid$ openid.config.php
+
+SetEnvIf Authorization "(.*)" PHP_AUTH_DIGEST=$1
+
+<Files "openid.php">
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+<FilesMatch "\.html$">
+  ForceType 'application/xhtml+xml; charset=UTF-8'
+</FilesMatch>
