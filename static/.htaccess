@@ -3,6 +3,7 @@ RewriteEngine on
 RewriteRule ^openid$ openid.config.php
 
 AddOutputFilterByType DEFLATE text/html application/xhtml+xml text/css text/javascript
+FileETag MTime Size
 
 SetEnvIf Authorization "(.*)" PHP_AUTH_DIGEST=$1
 
