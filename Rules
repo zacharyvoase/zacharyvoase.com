@@ -16,7 +16,7 @@ require 'compass'
 compile '/media/sass/*/' do
   load_paths = ['content/media/sass', 'output/media/css']
   load_paths += Compass.sass_engine_options[:load_paths]
-  filter :sass, :syntax => :scss, :load_paths => load_paths
+  filter :sass, :syntax => :scss, :load_paths => load_paths, :style => :compressed
 end
 
 # Don't modify any other files in content/media/.
