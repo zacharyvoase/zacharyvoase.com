@@ -5,6 +5,13 @@ RewriteRule ^openid$ openid.config.php
 AddOutputFilterByType DEFLATE text/html application/xhtml+xml text/css text/javascript
 FileETag MTime Size
 
+ExpiresDefault "access plus 1 hour"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+
 SetEnvIf Authorization "(.*)" PHP_AUTH_DIGEST=$1
 
 <Files "openid.php">
