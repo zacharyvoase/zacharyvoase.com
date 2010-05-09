@@ -1,14 +1,21 @@
 !!! XML
-!!! 5
-%html{ html_attrs("en") }
+!!! RDFa
+%html{html_attrs("en"), xmlns}
   %head
-    %meta{ 'http-equiv' => "Content-Type", :content => "application/xhtml+xml; charset=utf-8" }
-    %link{ :rel => "openid.server", :href => "http://zacharyvoase.com/openid" }
-    %link{ :rel => "openid.delegate", :href => "http://zacharyvoase.com/openid" }
+    %meta{"http-equiv" => "Content-Type", :content => "application/xhtml+xml; charset=utf-8"}
     
-    %link{ :rel => "stylesheet", :href => "/media/css/style.css?#{ Time.now.to_i }", :media => "screen, projection" }
+    %link{     :rel => "rdf:type",     :href => "foaf:Person"}
+    %link{     :rel => "foaf:openid",  :href => "http://zacharyvoase.com/"}
+    %meta{:property => "foaf:name", :content => "Zachary Voase"}
+    %meta{:property => "foaf:nick", :content => "Zack"}
+    %meta{:property => "foaf:nick", :content => "zacharyvoase"}
     
-    %script{ :type => "text/javascript" }
+    %link{:rel => "openid.server", :href => "http://zacharyvoase.com/openid"}
+    %link{:rel => "openid.delegate", :href => "http://zacharyvoase.com/openid"}
+    
+    %link{:rel => "stylesheet", :href => "/media/css/style.css?#{ Time.now.to_i }", :media => "screen, projection"}
+    
+    %script{:type => "text/javascript"}
       :plain
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-9915287-2']);
@@ -21,7 +28,7 @@
     
     %title #{ @item[:title] }
   
-  %body{ :id => @item[:id] }
+  %body{:id => @item[:id]}
     %div#header-container
       %div#header
         %h1 My name is Zachary Voase and I’d like to build your next web app.
