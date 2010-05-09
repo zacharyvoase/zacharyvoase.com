@@ -10,7 +10,7 @@
     %meta{:property => "foaf:nick", :content => "Zack"}
     %meta{:property => "foaf:nick", :content => "zacharyvoase"}
     
-    %link{:rel => "openid.server", :href => "http://zacharyvoase.com/openid"}
+    %link{:rel => "openid.server",   :href => "http://zacharyvoase.com/openid"}
     %link{:rel => "openid.delegate", :href => "http://zacharyvoase.com/openid"}
     
     %link{:rel => "stylesheet", :href => "/media/css/style.css?#{ Time.now.to_i }", :media => "screen, projection"}
@@ -26,7 +26,7 @@
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
         })();
     
-    %title #{ @item[:title] }
+    %title{:property => "dc:title"}= @item[:title]
   
   %body{:id => @item[:id]}
     %div#header-container
