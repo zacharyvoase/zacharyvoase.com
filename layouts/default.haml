@@ -4,18 +4,18 @@
   %head
     %meta{"http-equiv" => "Content-Type", :content => "application/xhtml+xml; charset=utf-8"}
     %meta{:name => "description", :content => "My name is Zachary Voase, and I’d like to build your next web app."}
-    
+
     %link{     :rel => "rdf:type",     :href => "foaf:Person"}
     %link{     :rel => "foaf:openid",  :href => "http://zacharyvoase.com/"}
     %meta{:property => "foaf:name", :content => "Zachary Voase"}
     %meta{:property => "foaf:nick", :content => "Zack"}
     %meta{:property => "foaf:nick", :content => "zacharyvoase"}
-    
+
     %link{:rel => "openid.server",   :href => "http://zacharyvoase.com/openid"}
     %link{:rel => "openid.delegate", :href => "http://zacharyvoase.com/openid"}
-    
+
     %link{:rel => "stylesheet", :href => "/media/css/style.css?#{ Time.now.to_i }", :media => "screen, projection"}
-    
+
     %script{:type => "text/javascript"}
       :plain
         var _gaq = _gaq || [];
@@ -26,18 +26,17 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
         })();
-    
+
     %title{:property => "dc:title"}= @item[:title]
-  
+
   %body{:id => @item[:id]}
     %div#header-container
       %div#header
         %h1 My name is Zachary Voase and I’d like to build your next web app.
-    
+
     %div#content-container
-      %div#content
-        = yield
-    
+      %div#content= yield
+
     %div#footer-container
       %div#footer
         &#xa0;

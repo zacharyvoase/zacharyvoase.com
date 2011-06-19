@@ -4,19 +4,17 @@ id: index
 ---
 
 %p.copy
-  I build snazzy web apps using
-  %a{:rel => "foaf:interest", :href => "http://djangoproject.com"} Django
-  and
-  %a{:rel => "foaf:interest", :href => "http://rubyonrails.org/"} Rails
-  %span> .
+  I’m a hacker, and I love to build stuff for the Web.
 
-%p
-  %a{:rel => "foaf:weblog", :href => "http://blog.zacharyvoase.com/"} Blog
-  &#9733;
-  %a{:rel => "foaf:page", :href => "http://twitter.com/zacharyvoase"} Twitter
-  &#9733;
-  %a{:rel => "foaf:page", :href => "http://github.com/zacharyvoase"} GitHub
-  &#9733;
-  %a{:rel => "foaf:page", :href => "http://uk.linkedin.com/in/zacharyvoase"} CV/Résumé
-  &#9733;
-  %a{:rel => "foaf:mbox", :href => "mailto:z@zacharyvoase.com"} E-mail
+%nav#links
+  %ul
+    %li.first
+      %a{:rel => "foaf:weblog", :href => "http://blog.zacharyvoase.com/"} Blog
+    %li
+      %a{:rel => "foaf:page", :href => "http://twitter.com/zacharyvoase"} Twitter
+    %li
+      %a{:rel => "foaf:page", :href => "http://github.com/zacharyvoase"} GitHub
+    %li
+      %a{:rel => "foaf:page", :href => "/resume/"} Résumé
+    %li
+      %a{:rel => "foaf:mbox", :href => "mailto:z@zacharyvoase.com"} E-mail

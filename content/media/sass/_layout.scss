@@ -23,10 +23,10 @@ body, html {
 
 #header-container {
   @include container;
-  
+
   #header {
     @include section;
-    
+
     h1 {
       background-color: $light-teal;
       background-image: url(/media/img/header.png);
@@ -43,24 +43,35 @@ body, html {
 
 #content-container {
   @include container;
-  
+
   background-color: #fff;
   border-top: 8px solid $teal;
   border-bottom: 8px solid $teal;
-  
+
   #content {
     @include section;
-    
+
     padding: 20px 20px 0 20px;
     width: 640px - (20px * 2);
-    
+
     p { margin-bottom: 20px; }
+    dl { margin-left: 0; }
+    dt { margin-bottom: 5px; }
+    dd { margin-bottom: 15px; }
+    hr {
+      border: none;
+      border-bottom: 1px solid #999;
+    }
+    th, td {
+      border: none;
+      border-bottom: 1px solid #999;
+    }
   }
 }
 
 #footer-container {
   @include container;
-  
+
   #footer {
     @include section;
     @include border-radius-bottom(10px);

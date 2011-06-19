@@ -13,6 +13,7 @@ end
 
 # Render Sass files with Compass.
 require 'compass'
+require 'ninesixty'
 compile '/media/sass/*/' do
   load_paths = ['content/media/sass', 'output/media/css']
   load_paths += Compass.sass_engine_options[:load_paths]
@@ -31,7 +32,7 @@ compile '*' do
   when 'haml'
     filter :haml, :attr_wrapper => '"'
   end
-  
+
   layout '/default/'
 end
 
