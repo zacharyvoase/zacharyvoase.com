@@ -16,16 +16,16 @@ results:
     - ["Physics",              "AS",     "2008",  "A"]
     - ["Spanish",              "AS",     "2007",  "A"]
 technologies:
-  - ["Python",                          5]
-  - ["UNIX (Ubuntu, RHEL,  Mac OS X)",  5]
-  - ["Django",                          3]
-  - ["JavaScript (incl. jQuery)",       3]
-  - ["CSS",                             3]
-  - ["Semantic Web",                    2]
-  - ["Ruby",                            2]
-  - ["Rails",                           2]
-  - ["Twitter API",                     2]
-  - ["Facebook Social Graph API",       1]
+  - ["Python",                     5]
+  - ["UNIX (Ubuntu, RHEL, OS X)",  5]
+  - ["Django",                     3]
+  - ["JavaScript (incl. jQuery)",  3]
+  - ["CSS",                        3]
+  - ["Semantic Web",               2]
+  - ["Ruby",                       2]
+  - ["Rails",                      2]
+  - ["Twitter API",                2]
+  - ["Facebook Social Graph API",  1]
 ---
 
 %h1 Zachary Voase
@@ -230,20 +230,6 @@ technologies:
     I didn’t go to college or university, but I did graduate from high school
     in the summer of 2009. These were my results:
 
-  %section#sat.results
-    %h3 SAT
-    %table
-      %thead
-        %th Test
-        %th Date
-        %th Score/800
-      %tbody
-        - @item[:results][:sat].each do |result|
-          %tr
-            %td= result[0]
-            %td= result[1]
-            %td= result[2]
-
   %section#a-levels.results
     %h3 A-Levels
     %table
@@ -259,6 +245,20 @@ technologies:
             %td= result[1]
             %td= result[2]
             %td= result[3]
+
+  %section#sat.results
+    %h3 SAT
+    %table
+      %thead
+        %th Test
+        %th Date
+        %th Score
+      %tbody
+        - @item[:results][:sat].each do |result|
+          %tr
+            %td= result[0]
+            %td= result[1]
+            %td= result[2]
 
 %section#conclusion
   %p

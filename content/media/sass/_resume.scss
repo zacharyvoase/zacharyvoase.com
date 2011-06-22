@@ -69,6 +69,7 @@ $ninesixty-grid-width: 640px;
       @include grid(6);
       table { width: 100%; }
     }
+    #contact { @include grid(5); @include grid-push(1); }
 
     .introduction {
       font-size: 1.3em;
@@ -79,14 +80,14 @@ $ninesixty-grid-width: 640px;
       @include pie-clearfix;
       #technologies { @include grid(6); @include alpha; }
       #references { @include grid(5); @include grid-push(1); @include omega; }
+      table { width: 100%; }
     }
 
     #education {
       @include pie-clearfix;
-      .results { @include grid(6); }
       .results table { width: 100%; }
-      #sat { @include alpha; }
-      #a-levels { @include omega; }
+      #a-levels { @include grid(6); @include alpha; }
+      #sat { @include grid(5); @include grid-push(1); @include omega; }
     }
 
     #conclusion {
