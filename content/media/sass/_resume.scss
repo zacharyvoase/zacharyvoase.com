@@ -83,8 +83,16 @@ $ninesixty-grid-width: 640px;
 
     #education {
       @include pie-clearfix;
-      .results { @include grid(6); @include alpha; }
+      .results { @include grid(6); }
       .results table { width: 100%; }
+      #sat { @include alpha; }
+      #a-levels { @include omega; }
+    }
+
+    #conclusion {
+      font-size: 2em;
+      line-height: 1.5em;
+      margin: 30px 0;
     }
   }
 }
