@@ -72,6 +72,8 @@ body, html {
 #footer-container {
   @include container;
 
+  padding-bottom: 8px;
+
   #footer {
     @include section;
     @include border-radius-bottom(10px);
