@@ -55,7 +55,7 @@ $ninesixty-grid-width: 640px;
 
         &.first {
           margin-left: 0;
-          &:before { content: none; }
+          &:before { content: ''; }
         }
       }
     }
@@ -66,6 +66,12 @@ $ninesixty-grid-width: 640px;
     #info, #contact {
       @include grid(6);
       table { width: 100%; }
+    }
+
+    #experience {
+      @include pie-clearfix;
+      #technologies { @include grid(6); @include alpha; }
+      #references { @include grid(5); @include grid-push(1); @include omega; }
     }
 
     #education {

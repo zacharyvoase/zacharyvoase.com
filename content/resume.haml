@@ -1,6 +1,31 @@
 --- 
 title: Résumé
 id: resume
+results:
+  sat:
+    - ["SAT II: Math Level 2",  "Dec 2008",  "800"]
+    - ["SAT II: Physics",       "Dec 2008",  "800"]
+    - ["SAT I: Reading",        "Nov 2008",  "760"]
+    - ["SAT I: Writing",        "Nov 2008",  "720"]
+    - ["SAT I: Math",           "Nov 2008",  "780"]
+  a_levels:
+    - ["Further Mathematics",  "AS+A2",  "2009",  "A"]
+    - ["Biology",              "AS+A2",  "2009",  "A"]
+    - ["Mathematics",          "AS+A2",  "2008",  "A"]
+    - ["English Literature",   "AS",  "2008",  "A"]
+    - ["Physics",              "AS",  "2008",  "A"]
+    - ["Spanish",              "AS",  "2007",  "A"]
+technologies:
+  - ["Python",                          5]
+  - ["UNIX (Ubuntu, RHEL,  Mac OS X)",  5]
+  - ["Django",                          3]
+  - ["JavaScript (incl. jQuery)",       3]
+  - ["CSS",                             3]
+  - ["Semantic Web",                    2]
+  - ["Ruby",                            2]
+  - ["Rails",                           2]
+  - ["Twitter API",                     2]
+  - ["Facebook Social Graph API",       1]
 ---
 
 %h1 Résumé
@@ -14,7 +39,7 @@ id: resume
     %li
       %a{:href => "#skills"} Skills
     %li
-      %a{:href => "#experience"} Experience &amp; References
+      %a{:href => "#experience"} Experience
     %li
       %a{:href => "#education"} Education
 
@@ -27,6 +52,9 @@ id: resume
     %tr
       %th Name
       %td Zachary Voase
+    %tr
+      %th Location
+      %td London, UK
     %tr
       %th Website
       %td
@@ -53,9 +81,15 @@ id: resume
   %h2 Profile
 
   %p
+    I’m a polyglot devigner and generalist, and I’m passionate about creating
+    experiences for the Web. I design and build software centered around
+    humans, and I can easily adapt to working with different technologies and
+    styles of working—in fact, I love it.
+
+  %p
     I started using computers at a young age; the first programming language I
-    learned was Scheme, and since then I’ve continuously invested in my
-    repertoire. I’ve worked in various scenarios, on both open-source and
+    learned was Scheme, and since then I’ve continuously invested in expanding
+    my repertoire. I’ve worked in various scenarios, on both open-source and
     proprietary software, remotely and on-site, and as a contractor and an
     employee. I feel this gives me a solid breadth of experience in interacting
     with people, which is often the most challenging aspect of development.
@@ -141,44 +175,53 @@ id: resume
   %h2 Skills
 
   %p
-    Most of my work up to this point has been in <strong>Python</strong>,
-    using the <strong>Django</strong> web framework. I’m also experienced
-    with <strong>Ruby</strong> and <strong>Rails</strong>. I develop
-    exclusively on <strong>UNIX</strong> systems, and have done so for 5
-    years now. I use <strong>Vim</strong> to write code, and
-    <strong>Git</strong> to manage it (though I can also use
-    <strong>Subversion</strong> and <strong>Mercurial</strong>).
+    Most of my work up to this point has been in <dfn>Python</dfn>, using the
+    <dfn>Django</dfn> web framework. I’m also experienced with <dfn>Ruby</dfn>
+    and <dfn>Rails</dfn>. I develop exclusively on <dfn>UNIX</dfn> systems, and
+    have done so for 5 years now. I use <dfn>Vim</dfn> to write code, and
+    <dfn>Git</dfn> to manage it (though I can also use <dfn>Subversion</dfn>
+    and <dfn>Mercurial</dfn>).
 
   %p
-    On the front-end, I’m very comfortable with <strong>JavaScript</strong>,
-    especially with <strong>jQuery</strong>, and I can write cross-browser
-    compatible <strong>HTML</strong> and <strong>CSS</strong>. Still, most of
-    my styling is now done using <strong>Sass</strong> and
-    <strong>Compass</strong>.
+    On the front-end, I’m very comfortable with <dfn>JavaScript</dfn>,
+    especially with <dfn>jQuery</dfn>, and I can write cross-browser compatible
+    <dfn>HTML</dfn> and <dfn>CSS</dfn>. Still, most of my styling is now done
+    using <dfn>Sass</dfn> and <dfn>Compass</dfn>.
 
   %p
-    I have a strong understanding of modern <strong>Web
-    architecture</strong>, including the <strong>Semantic Web</strong>, the
-    principles of <strong>REST</strong>, and <strong>HTTP</strong> itself.
-    I’m familiar with a few common APIs, including <strong>Facebook</strong>,
-    <strong>Twitter</strong> and <strong>OAuth</strong>.
+    I have a strong understanding of modern <dfn>Web architecture</dfn>,
+    including the <dfn>Semantic Web</dfn>, the principles of <dfn>REST</dfn>,
+    and <dfn>HTTP</dfn> itself.  I’m familiar with a few common APIs, including
+    <dfn>Facebook</dfn>, <dfn>Twitter</dfn> and <dfn>OAuth</dfn>.
 
   %p
-    I’ve developed in <strong>Agile</strong> and <strong>Test-Driven
-    Development</strong> contexts for 2 years.  Each team I’ve worked on
-    has practised it differently, with varying elements of
-    <strong>Scrum</strong>, <strong>Extreme Programming</strong> and
-    <strong>Kanban</strong>. I take a lot of pride in my written and spoken
-    communication skills, and maintain a blog at
+    I’ve developed in <dfn>Agile</dfn> and <dfn>Test-Driven Development</dfn>
+    contexts for 2 years.  Each team I’ve worked on has practised it
+    differently, with varying elements of <dfn>Scrum</dfn>, <dfn>Extreme
+    Programming</dfn> and <dfn>Kanban</dfn>. I take a lot of pride in my
+    written and spoken communication skills, and maintain a blog at
     <a href="http://blog.zacharyvoase.com/">blog.zacharyvoase.com</a>.
 
 %section#experience
-  %h2 Experience &amp; References
+  %h2 Experience
 
-  %p
-    In the interest of confidentiality, I ask that you
-    <a href="#contact">contact me</a> for specific information and a list of
-    references.
+  %section#technologies
+    %h3 Technologies
+    %p
+      I’m usually very quick to adapt to different technologies and paradigms,
+      but these are the ones I’m most comfortable with at the moment:
+    %table
+      - @item[:technologies].each do |tech|
+        %tr
+          %th= tech[0]
+          %td= "#{tech[1]} year#{"s" if tech[1] != 1}"
+
+  %section#references
+    %h3 References
+    %p
+      In the interest of my clients’ confidentiality, I ask that you
+      <a href="#contact">contact me directly</a> for specific information and a
+      list of references.
 
 %section#education
   %h2 Education
@@ -195,26 +238,11 @@ id: resume
         %th Date
         %th Score/800
       %tbody
-        %tr
-          %td SAT II: Math Level 2
-          %td Dec 2008
-          %td 800
-        %tr
-          %td SAT II: Physics
-          %td Dec 2008
-          %td 800
-        %tr
-          %td SAT I: Reading
-          %td Nov 2008
-          %td 760
-        %tr
-          %td SAT I: Writing
-          %td Nov 2008
-          %td 720
-        %tr
-          %td SAT I: Math
-          %td Nov 2008
-          %td 780
+        - @item[:results][:sat].each do |result|
+          %tr
+            %td= result[0]
+            %td= result[1]
+            %td= result[2]
 
   %section#a-levels.results
     %h3 A-Levels
@@ -225,48 +253,9 @@ id: resume
         %th Year
         %th Grade
       %tbody
-        %tr
-          %td Further Mathematics
-          %td A2
-          %td 2009
-          %td A
-        %tr
-          %td Further Mathematics
-          %td AS
-          %td 2009
-          %td A
-        %tr
-          %td Biology
-          %td A2
-          %td 2009
-          %td A
-        %tr
-          %td Mathematics
-          %td A2
-          %td 2008
-          %td A
-        %tr
-          %td Biology
-          %td AS
-          %td 2008
-          %td A
-        %tr
-          %td English Literature
-          %td AS
-          %td 2008
-          %td A
-        %tr
-          %td Physics
-          %td AS
-          %td 2008
-          %td A
-        %tr
-          %td Mathematics
-          %td AS
-          %td 2007
-          %td A
-        %tr
-          %td Spanish
-          %td AS
-          %td 2007
-          %td A
+        - @item[:results][:a_levels].each do |result|
+          %tr
+            %td= result[0]
+            %td= result[1]
+            %td= result[2]
+            %td= result[3]

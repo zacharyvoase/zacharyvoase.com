@@ -16,6 +16,7 @@ body {
     text-decoration: underline;
     &:active { color: #666; }
   }
+
 }
 
 body#index {
@@ -29,6 +30,7 @@ body#index {
 }
 
 body#resume {
+  dfn { font-weight: bold; }
 }
 
 dt {
