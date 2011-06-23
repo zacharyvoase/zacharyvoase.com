@@ -8,7 +8,7 @@ end
 # ---- Compilation ----
 
 # Don't modify Sass partials.
-compile '/media/sass/_*/' do
+compile '/media/sass/**/_*/' do
 end
 
 # Render Sass files with Compass.
@@ -45,7 +45,9 @@ end
 
 # content/media/sass/file.sass => /media/css/file.css
 route '/media/sass/*/' do
-  item.identifier.gsub(%r{^/media/sass/}, "/media/css/").chop + ".css"
+  unless item.identifier =~ /\/_[^\/]+\/$/
+    item.identifier.gsub(%r{^/media/sass/}, "/media/css/").chop + ".css"
+  end
 end
 
 # content/media/file.ext => /file.ext
