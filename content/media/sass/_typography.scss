@@ -1,4 +1,4 @@
-@import "_colors";
+@import "util/_colors";
 
 $serif: "Times", "Times New Roman", "Georgia", "Liberation Serif", "serif";
 $sans-serif: "Gill Sans", "GillSans", "Gill Sans MT", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
@@ -17,21 +17,6 @@ body {
     text-decoration: underline;
     &:active { color: #666; }
   }
-
-}
-
-body#index {
-  text-align: center;
-  text-transform: uppercase;
-
-  p.copy {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
-body#resume {
-  dfn { font-weight: bold; }
 }
 
 dt {
@@ -40,4 +25,4 @@ dt {
   letter-spacing: 2px;
 }
 
-th { text-align: left; }
+th, td { text-align: left; }

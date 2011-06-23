@@ -42,7 +42,7 @@ $ninesixty-grid-width: 640px;
 
   #header-container { display: none; }
 
-  #content-container #content {
+  #content {
     width: 640px;
     padding: 20px 0 0 0;
 
@@ -80,37 +80,47 @@ $ninesixty-grid-width: 640px;
       }
     }
 
-    hr { clear: both; margin: 30px 0; }
-
-    > section { @include grid(12); }
-    #info, #contact {
-      @include grid(6);
-      table { width: 100%; }
+    hr {
+      clear: both;
+      margin: 30px 0;
     }
-
+    table { width: 100%; }
+    dfn { font-weight: bold; }
     .introduction {
       font-size: 18px;
       line-height: 27px;
     }
 
+    > section { @include grid(12); }
+    #info, #contact { @include grid(6); }
+
     #experience {
-      @include pie-clearfix;
-      #technologies { @include grid(6); @include alpha; }
-      #references { @include grid(6); @include omega; }
-      table { width: 100%; }
+      > section { @include grid(6); }
+      #technologies { @include alpha; }
+      #references { @include omega; }
     }
 
     #education {
-      @include pie-clearfix;
-      .results table { width: 100%; }
-      #a-levels { @include grid(6); @include alpha; }
-      #sat { @include grid(6); @include omega; }
+      .results { @include grid(6); }
+      #a-levels { @include alpha; }
+      #sat { @include omega; }
     }
 
     #conclusion {
       font-size: 2em;
       line-height: 1.5em;
       margin: 30px 0;
+      @include grid(12);
+    }
+
+    @media (max-width: 720px) {
+      > section, #info, #contact { @include grid(12); }
+      #education .results,
+      #experience > section {
+        @include grid(12);
+        @include alpha;
+        @include omega;
+      }
     }
   }
 }

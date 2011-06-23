@@ -1,6 +1,16 @@
 @import "compass/utilities/general/clearfix";
 @import "_typography";
 
+body#index {
+  text-align: center;
+  text-transform: uppercase;
+
+  p.copy {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
 nav#links {
   @include pie-clearfix;
 
@@ -30,7 +40,7 @@ nav#links {
 
     &.first {
       margin-left: 0;
-      &:before { content: none; }
+      &:before { content: ''; }
     }
   }
 }

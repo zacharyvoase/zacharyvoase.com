@@ -1,6 +1,6 @@
 @import "compass/utilities/general/clearfix";
-@import "_border-radius";
-@import "_colors";
+@import "compass/css3/border-radius";
+@import "util/_colors";
 
 
 @mixin container {
@@ -23,21 +23,21 @@ body, html {
 
 #header-container {
   @include container;
+}
 
-  #header {
-    @include section;
+#header {
+  @include section;
 
-    h1 {
-      background-color: $light-teal;
-      background-image: url(/media/img/header.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      text-indent: -999em;
-      height: 264px;
-      width: 640px;
-      margin: 0;
-      padding: 80px 0;
-    }
+  h1 {
+    background-color: $light-teal;
+    background-image: url(/media/img/header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+    height: 264px;
+    width: 640px;
+    margin: 0;
+    padding: 80px 0;
   }
 }
 
@@ -47,26 +47,26 @@ body, html {
   background-color: #fff;
   border-top: 8px solid $teal;
   border-bottom: 8px solid $teal;
+}
 
-  #content {
-    @include section;
+#content {
+  @include section;
 
-    padding: 20px 20px 0 20px;
-    width: 640px - (20px * 2);
+  padding: 20px 20px 0 20px;
+  width: 640px - (20px * 2);
 
-    p { margin-bottom: 20px; }
-    dl { margin-left: 0; }
-    dt { margin-bottom: 5px; }
-    dd { margin-bottom: 15px; }
-    hr {
-      border: none;
-      border-bottom: 1px solid #999;
-    }
-    th, td {
-      border: none;
-      border-bottom: 1px solid #999;
-      padding-left: 0; padding-right: 0;
-    }
+  p { margin-bottom: 20px; }
+  dl { margin-left: 0; }
+  dt { margin-bottom: 5px; }
+  dd { margin-bottom: 15px; }
+  hr {
+    border: none;
+    border-bottom: 1px solid #999;
+  }
+  th, td {
+    border: none;
+    border-bottom: 1px solid #999;
+    padding-left: 0; padding-right: 0;
   }
 }
 
@@ -74,11 +74,11 @@ body, html {
   @include container;
 
   padding-bottom: 8px;
+}
 
-  #footer {
-    @include section;
-    @include border-radius-bottom(10px);
-    background-color: $light-teal;
-    height: 100px;
-  }
+#footer {
+  @include section;
+  @include border-bottom-radius(10px);
+  background-color: $light-teal;
+  height: 100px;
 }
