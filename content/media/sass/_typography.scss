@@ -1,7 +1,8 @@
 @import "_colors";
 
 $serif: "Times", "Times New Roman", "Georgia", "Liberation Serif", "serif";
-$sans-serif: "Gill Sans", "Gill Sans MT", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+$sans-serif: "Gill Sans", "GillSans", "Gill Sans MT", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+
 
 body {
   font-family: $sans-serif;
